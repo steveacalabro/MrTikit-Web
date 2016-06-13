@@ -1,0 +1,38 @@
+<md-card class="eventCreateCard">
+    <md-content layout-padding>
+        <form name="eventForm">
+            <md-input-container>
+                <label>Event Title</label>
+                <input class="eventTitle" ng-model="event.title"></input>
+            </md-input-container>
+            <md-input-container>
+                <label>Event Description</label>
+                <textArea class="eventDescription" ng-model="event.description"></textArea>
+            </md-input-container>
+            <md-input-container>
+                <label>Event Location</label>
+                <input class="form-control" g-places-autocomplete force-selection="true" ng-model="event.location"/>
+            </md-input-container>
+            <div class="startDateTimeContainer">
+                <h3>Start</h3>
+                <md-datepicker md-placeholder="Date" ng-model="event.startDate"></md-datepicker>
+                <md-input-container>
+                    <input class="eventTime" ng-model="event.startTime" placeholder="Time" type="time"></input>
+                </md-input-container>
+            </div>
+            <div class="endDateTimeContainer">
+                <h3>End</h3>
+                <md-datepicker md-placeholder="Date" ng-model="event.endDate" md-min-date='event.startDate'></md-datepicker>
+                <md-input-container>
+                    <input class="eventTime" ng-model="event.endTime" placeholder="Time" type="time"></input>
+                </md-input-container>
+            </div>
+            <md-input-container>
+                <label>Paypal Email</label>
+                <input class="paypal" ng-model="event.paypalEmail"></input>
+            </md-input-container>
+            <md-button ng-if="!event.id" ng-click="createEvent()">Create Event</md-button>
+            <md-button ng-if="event.id" ng-click="updateEvent()">Save</md-button>
+        </form>
+    </md-content>
+</md-card>

@@ -1,0 +1,18 @@
+<div class="ticketTypeManage">
+    <md-card>
+        <div class="ticketTypeHeader">
+            <div>Manage Ticket Types</div>
+            <md-button class="add" ng-click="add()"><i class="fa fa-plus"></i>
+                <md-tooltip md-direction="left">
+                    Add New Ticket Type
+                </md-tooltip>
+            </md-button>
+        </div>
+        <div class="ticketType" ng-repeat="tt in ticketTypes">
+            <div class="name">{{tt.name}}</div>
+            <div class="maxTickets">{{tt.maxTickets}}</div>
+            <div class="price">{{tt.price|currency}}</div>
+            <md-button class="edit" ng-click="editTicketType(tt.id)">Edit Info</md-button>
+        </div>
+    </md-card>
+</div>

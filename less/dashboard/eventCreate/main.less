@@ -1,0 +1,139 @@
+.eventCreate {
+    @import 'dashboard/eventCreate/new';
+    @import 'dashboard/eventCreate/select';
+    @import 'dashboard/eventCreate/publish';
+    md-toolbar {
+        height: 100px;
+        line-height: 100px;
+        background-color: @MT_RED;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        .next {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+        .prev {
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            cursor: pointer;
+        }
+        /*
+        .timeline {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            .step {
+                border: @MT_GRAY 2px solid;
+                width: 40px;
+                height: 40px;
+                line-height: 36px;
+                font-size: 30px;
+                text-align: center;
+                border-radius: 20px;
+                color: @MT_GRAY;
+                font-weight: bold;
+                display: inline-block;
+                background-color: white;
+                &.done {
+                    background-color: #4AC948;
+                }
+                &.current {
+                    background-color: #FFE303;
+                }
+            }
+            .line {
+                height: 5px;
+                width: 100px;
+                display: inline-block;
+                margin-bottom: 8px;
+                margin-left: -4px;
+                margin-right: -5px;
+                background-color: white;
+                border-bottom: @MT_GRAY 1px solid;
+                border-top: @MT_GRAY 1px solid;
+                &.done {
+                    background-color: #4AC948;
+                }
+                &.current {
+                    background-color: #FFE303;
+                }
+            }
+        }*/
+        .progressbar {
+            margin-top: 25px;
+            counter-reset: step;
+            li {
+                list-style-type: none;
+                width: 33.33%;
+                float: left;
+                font-size: 12px;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+                line-height: 15px;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+            li:before {
+                width: 30px;
+                height: 30px;
+                content: counter(step);
+                counter-increment: step;
+                line-height: 30px;
+                border: 2px solid white;
+                display: block;
+                text-align: center;
+                margin: 0 auto 10px auto;
+                border-radius: 50%;
+                background-color: white;
+                z-index: 2;
+                position: relative;
+                color: black;
+                font-weight: normal;
+            }
+            li:after {
+                width: 100%;
+                height: 2px;
+                content: '';
+                position: absolute;
+                background-color: white;
+                top: 15px;
+                left: -50%;
+                z-index: 1;
+            }
+            li:first-child:after {
+                content: none;
+            }
+            li.complete {
+                color: white;
+                font-weight: normal;
+            }
+            li.complete:before {
+                border-color: #2D882D;
+                background-color: #2D882D;
+                color: white;
+            }
+            li.complete:after {
+                background-color: #2D882D;
+            }
+            li.active {
+                //color: #ffb347;
+                &:before {
+                    border-color: #ffb347;
+                    background-color: #ffb347;
+                }
+                &:after {
+                    background-color: #2D882D;
+                }
+            }
+        }
+    }
+}

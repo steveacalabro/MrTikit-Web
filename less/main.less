@@ -1,0 +1,64 @@
+@MT_RED: #c23b22;
+@MT_DRED: #9b2f1b;
+@MT_GRAY: #848484;
+@MT_LGRAY: #e9eaed;
+@MT_WHITE: #fff;
+@MT_WHITE_HOVER: #cecece;
+@MT_PURPLE: #8565c4;
+@MT_FONT_LOGO: 'Courgette';
+@MT_FONT_HEADER: 'Raleway';
+@MT_FONT_FANCY: 'Cookie';
+@MT_FONT_TEXT: 'Helvetica Neue';
+@import 'bootstrap';
+@import 'login';
+.app {
+    @import 'partials/header';
+    @import 'partials/footer';
+    @import 'error';
+    @import 'home';
+    @import 'events';
+    @import 'event';
+    @import 'myTickets';
+    @import 'myTicketsView';
+    @import 'reviewPurchase';
+    overflow: scroll;
+    height: 100%;
+}
+
+.dashboard {
+    @import 'dashboard/partials/sidebar';
+    @import 'dashboard/partials/header';
+    @import 'dashboard/error';
+    @import 'dashboard/myEvents';
+    @import 'dashboard/eventOverview';
+    @import 'dashboard/eventCreate/main';
+    @import 'dashboard/eventEdit';
+    @import 'dashboard/ticketTypeCreate';
+    @import 'dashboard/ticketTypeEdit';
+    @import 'dashboard/ticketTypeManage';
+    height: 100%;
+    .mainContent {
+        background-color: @MT_LGRAY;
+        overflow-y: scroll;
+        height: 100%;
+    }
+}
+
+@import 'boxOffice/main.less';
+
+body {
+    background-color: @MT_LGRAY;
+}
+
+md-toolbar {
+    min-height: 50px;
+    height: 50px;
+}
+
+.mainContent {
+    background-color: @MT_LGRAY;
+}
+
+html {
+    overflow: hidden;
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <base href="/">
+
+    <!-- favicon-->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Angular Material -->
+    <link rel='stylesheet' href="lib/angular-material/angular-material.min.css" />
+
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Google AutoComplete -->
+    <link rel="stylesheet" href="lib/angular-google-places-autocomplete/src/autocomplete.css">
+
+    <!-- This comes from the autoprefixed scss file -->
+    <link rel="stylesheet" href="styles/mainStyleFixed.css">
+
+    <!-- END styles -->
+</head>
+
+<body ng-app="mrtikitApp">
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+
+    <!-- Facebook API -->
+    <!--<script src='//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=541547949359653'></script>-->
+
+    <div style="height:100%" ui-view></div>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway|Cookie|Courgette' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Maps -->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
+
+    <!-- Bower Components -->
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src='lib/angular-messages/angular-messages.min.js'></script>
+    <!--<script src="lib/angular-touch/angular-touch.min.js"></script>-->
+    <script src='lib/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src="lib/angular-aria/angular-aria.min.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/JsBarcode/JsBarcode.all.min.js"></script>
+    <script src="lib/qrcode-generator/js/qrcode.js"></script>
+    <script src="lib/angular-qrcode/angular-qrcode.js"></script>
+    <script src="lib/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="lib/angular-facebook/lib/angular-facebook.js"></script>
+    <script src="lib/angular-google-places-autocomplete/src/autocomplete.js"></script>
+    <!-- End Bower Components -->
+
+    <!-- scripts-->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/error.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/events.js"></script>
+    <script src="scripts/controllers/event.js"></script>
+    <script src="scripts/controllers/events/home.js"></script>
+    <script src="scripts/controllers/events/about.js"></script>
+    <script src="scripts/controllers/events/location.js"></script>
+    <script src="scripts/controllers/events/tickets.js"></script>
+    <script src="scripts/controllers/myTickets.js"></script>
+    <script src="scripts/controllers/myTicketsView.js"></script>
+    <script src="scripts/controllers/reviewPurchase.js"></script>
+    <script src="scripts/controllers/dashboard/partials/sidebar.js"></script>
+    <script src="scripts/controllers/dashboard/main.js"></script>
+    <script src="scripts/controllers/dashboard/error.js"></script>
+    <script src="scripts/controllers/dashboard/about.js"></script>
+    <script src="scripts/controllers/dashboard/home.js"></script>
+    <script src="scripts/controllers/dashboard/myEvents.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/main.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/new.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/edit.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/select.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/ticketTypes.js"></script>
+    <script src="scripts/controllers/dashboard/eventCreate/publish.js"></script>
+    <script src="scripts/controllers/dashboard/eventOverview.js"></script>
+    <script src="scripts/controllers/dashboard/eventEdit.js"></script>
+    <script src="scripts/controllers/dashboard/eventAttendees.js"></script>
+    <script src="scripts/controllers/dashboard/eventReports.js"></script>
+    <script src="scripts/controllers/dashboard/eventUtilities.js"></script>
+    <script src="scripts/controllers/dashboard/ticketTypeCreate.js"></script>
+    <script src="scripts/controllers/dashboard/ticketTypeEdit.js"></script>
+    <script src="scripts/controllers/dashboard/ticketTypeManage.js"></script>
+    <script src="scripts/controllers/boxOffice/main.js"></script>
+    <script src="scripts/controllers/boxOffice/home.js"></script>
+    <script src="scripts/controllers/boxOffice/purchase.js"></script>
+    <script src="scripts/controllers/boxOffice/refund.js"></script>
+    <script src="scripts/controllers/boxOffice/scan.js"></script>
+    <script src="scripts/controllers/boxOffice/willcall.js"></script>    
+    <!-- END scripts -->
+
+    <!-- Providers -->
+    <script src='scripts/providers/User.js'></script>
+    <script src='scripts/providers/Event.js'></script>
+    <script src='scripts/providers/Ticket.js'></script>
+    <script src='scripts/providers/TicketType.js'></script>
+    <!-- END Providers -->
+
+</body>
+
+</html>

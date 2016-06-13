@@ -1,0 +1,33 @@
+<md-card class="eventEditCard">
+    <md-content layout-padding>
+        <form>
+            <h1>Edit Event</h1>
+            <md-input-container>
+                <label>Event Title</label>
+                <input class="eventTitle" ng-model="event.title"></input>
+            </md-input-container>
+            <md-input-container>
+                <label>Event Location</label>
+                <input class="form-control" g-places-autocomplete force-selection="true" ng-model="event.location"/>
+            </md-input-container>
+            <div class="startDateTimeContainer">
+                <h3 >Start</h3>
+                <md-datepicker md-placeholder="Date" ng-model="event.startDate"></md-datepicker>
+                <md-input-container>
+                    <label>Time</label>
+                    <input class="eventTime" ng-model="event.startTime" type="time"></input>
+                </md-input-container>
+            </div>
+            <div class="endDateTimeContainer">
+                <h3>End</h3>
+                <md-datepicker md-placeholder="Date" ng-model="event.endDate"></md-datepicker>
+
+                <md-input-container>
+                    <label>Time</label>
+                    <input class="eventTime" ng-model="event.endTime" type="time"></input>
+                </md-input-container>
+            </div>
+            <md-button ng-click="updateEvent()">Save</md-button>
+        </form>
+    </md-content>
+</md-card>

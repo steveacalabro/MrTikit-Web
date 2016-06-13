@@ -1,0 +1,205 @@
+.landingpage {
+    .landingImage {
+        background: url(../images/landing.png) center no-repeat;
+        background-size: 100% 100%;
+        height: 100vh; //40em;
+        width: 100%;
+        position: relative;
+        //margin-top: -55px;
+        .landingOverlay {
+            height: 100%;
+            width: 100%;
+            padding-top: 40vh;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+    .landingText {
+        color: #ffffff;
+        font: 60px / 26px @MT_FONT_FANCY;
+        text-align: center;
+        height: 1em;
+    }
+    .appstore {
+        background: url(../images/appstore.png) center no-repeat;
+        height: 49px;
+        cursor: pointer;
+    }
+    .googleplay {
+        background: url(../images/googleplay.png) center no-repeat;
+        height: 49px;
+        cursor: pointer;
+    }
+    .landingButtonContainer {
+        bottom: 0;
+        position: absolute;
+    }
+    .landingButton {
+        cursor: pointer;
+        text-align: center;
+        font-size: 16pt;
+        background-color: @MT_RED;
+        color: @MT_WHITE;
+        padding-top: .3em;
+        padding-bottom: .3em;
+        border-radius: .4em .4em 0 0;
+    }
+    .center {
+        text-align: center;
+    }
+    .section2 {
+        background-color: @MT_WHITE;
+    }
+    .calloutContainer {
+        display: block;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .callout {
+        height: 7.5em;
+        width: 100%;
+        padding-top: 1.9em;
+        background: url(../images/callout.png) no-repeat center;
+        font-size: 14px;
+    }
+    .calloutIcon {
+        color: @MT_WHITE;
+    }
+    .calloutHeader {
+        font-family: @MT_FONT_HEADER;
+        font-weight: bold;
+        font-size: 22px;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+    .calloutText {
+        font-size: 16px;
+        color: @MT_GRAY;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .manage {
+        background: url(../images/manage.png) no-repeat center;
+        height: 26em;
+        background-size: 100% 100%;
+        background-color: @MT_LGRAY;
+    }
+    .manageContainer {
+        padding-left: 8em;
+        padding-right: 8em;
+        padding-top: 4.5em;
+    }
+    .manageTitle {
+        font-family: @MT_FONT_HEADER;
+        font-size: 22px;
+        font-weight: bold;
+        color: @MT_RED;
+        margin-bottom: 1em;
+        padding-right: 1.5em;
+    }
+    .manageText {
+        font-family: @MT_FONT_TEXT;
+        color: @MT_GRAY;
+        font-size: 16px;
+    }
+    .tour {
+        background-color: @MT_WHITE;
+        height: 40em;
+    }
+    .tourHeader {
+        color: @MT_RED;
+        font-family: @MT_FONT_HEADER;
+        font-size: 30px;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        height: 3em;
+    }
+    .tourTitle {
+        color: @MT_RED;
+        font-family: @MT_FONT_HEADER;
+        font-size: 22px;
+        font-weight: bold;
+        margin-left: 2.5em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        height: 1.5em;
+    }
+    .tourText {
+        color: @MT_GRAY;
+        margin-left: 3.5em;
+        padding-right: 2em;
+        height: 10em;
+        font-size: 16px;
+    }
+    .tourImage {
+        width: 73em;
+        margin-top: -3em;
+        margin-left: -4em;
+    }
+    .tourButton {
+        cursor: pointer;
+        margin-top: 1em;
+        margin-left: 3em;
+        color: @MT_WHITE;
+        background-color: @MT_RED;
+        width: 10em;
+        padding: .5em;
+        text-align: center;
+        border-radius: .4em;
+    }
+    .tourCount {
+        color: @MT_GRAY;
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+    .tourControlContainer {
+        color: @MT_GRAY;
+        margin-left: 3em;
+        margin-top: .5em;
+        user-select: none;
+    }
+    .tourControl {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: .4em;
+    }
+    .subscribe {
+        background: url(../images/subscribe.png) no-repeat center;
+        background-size: 100% 100%;
+        padding-top: 11em;
+        padding-bottom: 11em;
+    }
+    .subscribeText {
+        color: @MT_WHITE;
+        font-family: @MT_FONT_HEADER;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    .subscribeInputContainer {
+        padding-left: 2em;
+        padding-right: 2em;
+        line-height: 40px;
+        text-align: center;
+    }
+    .subscribeInput {
+        border: 0;
+        height: 40px;
+        padding-left: 20px;
+        font-size: 20px;
+        border-radius: 5px 0 0 5px;
+    }
+    .subscribeButton {
+        background-color: @MT_RED;
+        border: 0;
+        height: 40px;
+        line-height: 40px;
+        margin-left: -4px;
+        border-radius: 0 4px 4px 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        .subscribeIcon {
+            color: @MT_WHITE;
+            font-size: 20px;
+        }
+    }
+}

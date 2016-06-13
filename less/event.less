@@ -1,0 +1,106 @@
+.eventPage {
+    @import "events/home";
+    @import "events/about";
+    @import "events/location";
+    @import "events/tickets";
+    .image {
+        text-align: center;
+        width: 100%;
+        height: 375px;
+        padding: 0px;
+        overflow: hidden;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+            ;
+            opacity: .6;
+        }
+        img {
+            background-position: center;
+            width: 100%;
+        }
+        .info {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            .date {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background: rgba(0, 0, 0, .3);
+                border-radius: 10px;
+                border: 2px solid white;
+                color: white;
+                font-family: @MT_FONT_TEXT;
+                margin-right: 10px;
+                .month {
+                    text-transform: uppercase;
+                    margin-top: 5px;
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+                .day {
+                    font-size: 24px;
+                    line-height: 24px;
+                    margin-top: 3px;
+                }
+            }
+            .title {
+                display: inline-block;
+                font-size: 24px;
+                color: white;
+                font-family: @MT_FONT_TEXT;
+                font-weight: 500;
+            }
+        }
+    }
+    .actions {
+        height: 75px;
+        line-height: 75px;
+        background: @MT_RED;
+        text-align: center;
+        font-size: 16px;
+        font-family: @MT_FONT_HEADER;
+        color: white;
+        font-weight: 700;
+        div {
+            border-right: 1px solid white;
+            cursor: pointer;
+            &:last-of-type {
+                border: 0;
+            }
+            &.active:after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 0;
+                height: 0;
+                border-top: solid 20px @MT_RED;
+                border-left: solid 20px transparent;
+                border-right: solid 20px transparent;
+                z-index: 1;
+            }
+            &:hover {
+                color: @MT_WHITE_HOVER;
+            }
+            &:focus {
+                outline-width: 0;
+            }
+        }
+    }
+    .content {
+        margin-top: 0;
+        .row {
+            background: @MT_WHITE;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<md-card class="ticketTypeCreate">
+    <md-content layout-padding>
+        <form>
+            <md-input-container>
+                <label>Name</label>
+                <input class="name" ng-model="ticketType.name"></input>
+            </md-input-container>
+            <md-input-container>
+                <label>Price</label>
+                <input class="price" ng-model="ticketType.price" type="number" ng-pattern="/^[0-9]+(\.[0-9]{2})$/" step=".01"></input>
+            </md-input-container>
+            <md-input-container>
+                <label>Max number to sell</label>
+                <input class="maxTickets" ng-model="ticketType.maxTickets" type="number" min=0></input>
+            </md-input-container>
+            <md-button ng-click="createTicketType()">Create</md-button>
+        </form>
+    </md-content>
+</md-card>

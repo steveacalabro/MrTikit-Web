@@ -1,0 +1,26 @@
+<div class="myTicketsView container">
+    <div class="row">
+        <md-button class="md-raised" ng-click="go('/myTickets')">
+            <i class="fa fa-chevron-left"></i> Back
+        </md-button>
+        <md-button class="md-raised printTicket" ng-click="printTicket()">
+            <i class="fa fa-print"></i> Print Ticket
+        </md-button>
+        <md-content>
+            <h1>{{event.title}}</h1>
+            <div class="start">Start: {{event.startDateTime | date : 'EEEE dd/MM/yyyy hh:mm a'}}</div>
+            <div class="end">End: {{event.endDateTime | date : 'EEEE dd/MM/yyyy hh:mm a'}}</div>
+            <div class="location">
+                {{event.location.name}}<br/>
+                {{event.location.location.street}}, {{event.location.location.city}}, {{event.location.location.state}}<br/> {{event.location.location.zip}}, {{event.location.location.country}}<br/>
+                <a ng-href='{{event.location.link}}'>Get Directions</a>
+            </div>
+
+            <qrcode data="{{ticket.scanId}}"></qrcode>
+
+            <div class="barcodeContainer">
+                <img id="barcode" class="barcode" />
+            </div>
+        </md-content>
+    </div>
+</div>

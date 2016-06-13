@@ -1,0 +1,27 @@
+<div class='scanPage container-fluid'>
+    <div class='row'>
+        <div class='col-md-12'>
+            <md-input-container class="md-block">
+                <label>Ticket</label>
+                <input ng-model="scanId" ng-keypress="keyPressed($event)">
+            </md-input-container>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-4 col-md-offset-4 status'>
+            <span class="fa-stack fa-lg check" ng-class="{'enabled' : showSucess}">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-check fa-stack-1x"></i>
+            </span>
+            <span class="fa-stack fa-lg cross" ng-class="{'enabled' : showError}">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-times fa-stack-1x"></i>
+            </span>
+        </div>
+    </div>
+    <!--
+    <div class='row success'>
+        <i class="fa fa-check"></i>
+    </div>
+    -->
+</div>

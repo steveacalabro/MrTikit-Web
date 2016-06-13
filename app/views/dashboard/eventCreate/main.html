@@ -1,0 +1,26 @@
+<div class="eventCreate">
+    <md-toolbar>
+        <div class="prev" ng-show='step > 0'>
+            <i class="fa fa-chevron-left" ng-click="prev()" aria-hidden="true"></i>
+        </div>
+        <ul class="progressbar" ng-show='step > 0'>
+            <li ng-class="{'complete': step > 1, 'active': step == 1}">Event Info</li>
+            <li ng-class="{'complete': step > 2, 'active': step == 2}">Ticket Types</li>
+            <li ng-class="{'complete': step > 3, 'active': step == 3}">Publish</li>
+        </ul>
+        <!--
+        <div class='timeline'>
+            <div class='step' ng-class="{'current': step==0, 'done':step>0}">0</div>
+            <div class="line" ng-class="{'current': step==1, 'done':step>1}"></div>
+            <div class='step' ng-class="{'current': step==1, 'done':step>1}">1</div>
+            <div class="line" ng-class="{'current': step==2, 'done':step>2}"></div>
+            <div class='step' ng-class="{'current': step==2, 'done':step>2}">2</div>
+            <div class="line" ng-class="{'current': step==3, 'done':step>3}"></div>
+            <div class='step' ng-class="{'current': step==3, 'done':step>3}">3</div>
+        </div>-->
+        <div class="next" ng-show='step > 0'>
+            <i class="fa fa-chevron-right" ng-click="next()" aria-hidden="true"></i>
+        </div>
+    </md-toolbar>
+    <div ui-view></div>
+</div>

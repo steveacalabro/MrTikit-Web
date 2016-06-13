@@ -1,0 +1,63 @@
+.myTicketsView {
+    button {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .printTicket {
+        float:right;
+        margin-right: 0px;
+    }
+    .barcodeContainer {
+        display: none;
+    }
+    h1 {
+        margin-left: 20px;
+    }
+    .start,
+    .end,
+    .location {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    .location {
+        margin-bottom: 20px;
+    }
+    .qrcode {
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        margin-left: 40%;
+        width: 20%;
+    }
+}
+
+@media print {
+    button {
+        display: none;
+    }
+    .myTicketsView {
+        md-content {
+            height: 900px;
+            qrcode {
+                position: fixed;
+                right: -150px;
+                top: 0;
+                width: 400px;
+            }
+            .barcodeContainer {
+                //height: 200px;
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                text-align: center;
+                width: 100%;
+                .barcode {
+                    display: inline-block;
+                    width: 500px;
+                    padding: 100px;
+                }
+            }
+        }
+    }
+}

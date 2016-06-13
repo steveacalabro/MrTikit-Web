@@ -1,0 +1,14 @@
+<div class="dashboard">
+    <div style='height:50px;'>
+        <div flex layout='row' class="header" ng-include="'views/dashboard/partials/header.html'"></div>
+    </div>
+    <div layout="row" style='height:100%;margin-top:-50px;padding-top:50px;'>
+        <md-sidenav class="sidebarContainer md-sidenav-left {{collapsed}}" flex="20" md-component-id="leftNav" md-is-locked-open="true">
+            <md-content class="sidebar sidebar-default open" id="sidebar" role="navigation" ng-include="'views/dashboard/partials/sidebar.html'" ng-controller="SidebarCtrl"></md-content>
+        </md-sidenav>
+        <div layout="column" style="height:100%" flex>
+            <md-content flex ui-view class='mainContent'></md-content>
+        </div>
+    </div>
+    <!--<div class="footer" ng-include="'views/partials/footer.html'"></div>-->
+</div>

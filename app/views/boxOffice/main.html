@@ -1,0 +1,31 @@
+<div class='boxOffice'>
+    <div class='header'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-11'>
+                    <h1>Mr Tikit Launch Party</h1>
+                </div>
+                <div class='col-md-1'>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='content container' ui-view></div>
+
+    <div class='footer'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-3'>
+                    <md-button aria-label="Back" ng-click='goBack()'>
+                        <i class="fa fa-chevron-left"></i> {{backOrExit()}} to Dashboard
+                    </md-button>
+                </div>
+                <div class='col-md-9'>
+                    <p>Copyright &copy; Mr Tikit 2016</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

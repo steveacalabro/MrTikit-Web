@@ -1,0 +1,38 @@
+<div layout="row" class="loginPage" layout-align="center center" layout-wrap ng-cloak>
+    <md-card>
+        <img ng-src="images/LoginLogo.png" class="md-card-image" />
+        <md-card-content layout="column" class="md-padding">
+            <form name='loginForm'>
+                <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                <input type='text' style='display: none'>
+                <input type='password' style='display: none'>
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <md-icon><i class="fa fa-user"></i></md-icon>
+                    <input required type="email" name="loginEmail" ng-model="email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" autocomplete='off' />
+                    <div ng-messages="loginForm.loginEmail.$error">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must be between 10 and 100 characters long and look like an e-mail address.
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <md-icon><i class="fa fa-lock"></i></md-icon>
+                    <input required name='password' ng-model="password" type="password" autocomplete='off' ng-keyup="$event.keyCode == 13 && login()">
+                    <div ng-messages="loginForm.password.$error">
+                        <div ng-message="required">
+                            Please enter a password.
+                        </div>
+                    </div>
+                </md-input-container>
+                <div layout="row" layout-align="center center">
+                    <md-button class="md-raised md-primary" ng-click='login()'>Login</md-button>
+                    <md-button class="fb-login-button" ng-click="fbLogin()"><i class="fa fa-facebook"></i>Login With Facebook</md-button>
+                    <div flex="flex"></div>
+                </div>
+            </form>
+            <a href='#'>Forgot Your Password?</a>
+        </md-card-content>
+    </md-card>
+</div>

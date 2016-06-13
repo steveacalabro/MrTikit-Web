@@ -1,0 +1,36 @@
+<div class='row ticketsPage'>
+    <div class='row'>
+        <div class='col-md-12'>
+            <div class='ticketHeader'>
+                <h3>Ticket</h3>
+                <h3 class='qty'>Qty</h3>
+            </div>
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat='type in ticketTypes'>
+                    <div class="md-list-item-text">
+                        <h3>{{type.name}}</h3>
+                        <p>{{type.price|currency}} 
+                            <!-- - Save 10$ before June 1st 2016</p>-->
+                        </p>
+                        <input class='md-secondary' ng-model="qty[$index]" type="number" step="1" ng-disabled='validTicket($index)'>
+                    </div>
+                    <md-divider ng-if='!$last'></md-divider>
+                </md-list-item>
+                <md-list-item ng-show='ticketTypes.length <= 0'>
+                    <div class="md-list-item-text">
+                        <h3>No Tickets Avalible</h3>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-3 col-md-offset-9 checkout' ng-show='ticketTypes.length > 0'>
+            <md-button class="md-raised" ng-click='purchaseTicket()'>Checkout</md-button>
+        </div>
+    </div>
+    <div ng-show="showspinner" class="spinnerContainer">
+        <div><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div>
+        <div>Processing your request...</div>
+    </div>
+</div>

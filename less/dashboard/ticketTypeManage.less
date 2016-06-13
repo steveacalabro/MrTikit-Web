@@ -1,0 +1,43 @@
+.ticketTypeManage {
+    .ticketTypeHeader {
+        background-color: @MT_RED;
+        color: @MT_WHITE;
+        line-height: 50px;
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+        div {
+            display: inline-block;
+        }
+        .add {
+            float: right;
+            display: inline-block;
+            font-size: 30px;
+        }
+    }
+    .ticketType {
+        border-bottom: 1px solid;
+        padding: 20px 10px;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .name,
+        .price,
+        .maxTickets {
+            display: inline-block;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            &:first-child {
+                text-align: left;
+            }
+        }
+        .edit {
+            float: right;
+        }
+    }
+}

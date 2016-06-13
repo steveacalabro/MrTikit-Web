@@ -1,0 +1,26 @@
+<div class="ticketTypes">
+    <form name="ticketTypeForm">
+        <md-card class="ticketType" ng-repeat="tt in ticketTypes">
+            <md-card-content>
+                <ng-form name="ttf-{{$index}}">
+                    <md-input-container>
+                        <label>Name</label>
+                        <input class="name" ng-model="tt.name"></input>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Price</label>
+                        <input class="price" ng-model="tt.price" type="number" ng-pattern="/^[0-9]+(\.[0-9]{2})$/" step=".01"></input>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Max number to sell</label>
+                        <input class="maxTickets" ng-model="tt.maxTickets" type="number" min=0></input>
+                    </md-input-container>
+                    <md-button ng-show="tt.id" ng-disabled="ticketTypeForm['ttf-'+$index].$pristine" ng-click="updateTicketType($index)">Save</md-button>
+                    <md-button ng-hide="tt.id" ng-disabled="ticketTypeForm['ttf-'+$index].$pristine" ng-click="createTicketType($index)">Create</md-button>
+                </ng-form>
+                <!--<div>dirty: {{ticketTypeForm["ttf-"+$index].$dirty}}</div>
+                <div>pristine: {{ticketTypeForm["ttf-"+$index].$pristine}}</div>-->
+            </md-card-content>
+        </md-card>
+    </form>
+</div>

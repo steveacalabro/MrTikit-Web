@@ -1,0 +1,14 @@
+<div class="myTickets container">
+    <div class="row">
+        <md-card class="ticket" ng-repeat="ticket in tickets">
+            <md-card-content>
+                <md-content>
+                    <div class="event">{{ticket.event.title}}</div>
+                    <div class="price">{{ticket.ticketType.price|currency}}</div>
+                    <div class="date">{{ticket.event.startDateTime|date:"MMM d, y h:mm a"}}</div>
+                    <md-button ng-click="go('myTickets/' + ticket.id +'/view')">View</md-button>
+                </md-content>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

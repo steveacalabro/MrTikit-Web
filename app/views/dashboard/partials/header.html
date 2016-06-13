@@ -1,0 +1,29 @@
+<div flex='5' ng-click="toggleCollapse()" class="headerItem menubutton">
+    <i class="fa fa-bars"></i>
+
+</div>
+<div flex='60' class="logoContainer">
+    <img class='logo' src='images/logo_bowtie.png' />
+    <div class="title">MrTikit</div>
+</div>
+<div flex class="headerItem events" ng-click="go('/dashboard/myEvents')">
+    <div class="headerItemText">My Events</div><i class="fa fa-calendar-o"></i>
+</div>
+<div flex class="headerItem tickets" ng-click="go('/myTickets')">
+    My Tickets <i class="fa fa-ticket"></i>
+</div>
+<div flex class="headerItem user">
+    <md-menu md-offset="0 50">
+        <md-button aria-label="Open User Actions" class="md-icon-button" ng-click="openUserMenu($mdOpenMenu, $event)">
+            <i class="fa fa-user"></i>
+        </md-button>
+        <md-menu-content width="4">
+            <md-menu-item>
+                <md-button ng-click="logout()">
+                    <i class="fa fa-sign-out"></i>
+                    Logout
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</div>

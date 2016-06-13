@@ -1,0 +1,164 @@
+.sidebarContainer {
+    background-color: #2F323B;
+    font-family: 'Lato', sans-serif;
+    transition: all .5s ease-in-out;
+    height: 100%;
+    .sidebar {
+        background: none;
+        overflow-x: hidden;
+        ul {
+            padding: 0;
+            margin-top: 5px;
+            margin-before: 0;
+        }
+        button {
+            width: 100%;
+            min-width: 50px;
+            padding-left: 10%;
+            position: relative;
+            margin: 0;
+            text-align: left;
+            height: 40px;
+            text-transform: none;
+            font-weight: bold;
+            color: white;
+            border-radius: 0;
+            i {
+                -webkit-font-smoothing: antialiased;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+                margin-right: 10px;
+            }
+            &.active {
+                background-color: @MT_RED;
+            }
+        }
+    }
+    .navContainer {
+        transition: all .5s ease-in-out;
+        padding-bottom: 51px;
+    }
+    .userContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        height: 130px;
+        transition: all .5s ease-in-out;
+        .image {
+            border: 1px solid #89a;
+            width: 96px;
+            height: 97px;
+            border-radius: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all .5s ease-in-out;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            border-radius: 50px;
+            margin-left: -2px;
+            margin-top: -2px;
+            transition: all .5s ease-in-out;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+    }
+    h1 {
+        font-size: 15px;
+        margin-bottom: 0px;
+        color: white;
+        padding-left: 15px;
+        transition: all .5s ease-in-out;
+    }
+    .sidebarLink {
+        cursor: pointer;
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    button {
+        transition: all .5s ease-in-out;
+    }
+    &.collapsed {
+        max-width: 5%;
+        transition: all .5s ease-in-out;
+        h1 {
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+        .image {
+            width: 46px;
+            height: 46px;
+            transition: all .5s ease-in-out;
+            img {
+                width: 50px;
+                transition: all .5s ease-in-out;
+            }
+        }
+        .userContainer {
+            margin-bottom: 20px;
+            height: 50px;
+            transition: all .5s ease-in-out;
+            h1 {
+                opacity: 0;
+                transition: all .5s ease-in-out;
+            }
+        }
+        button {
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+            transition: all .5s ease-in-out;
+            span {
+                display: none;
+                width: 0;
+            }
+            i {
+                margin-right: 0;
+            }
+        }
+        .navContainer {
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .sidebar .curEvent {
+            transition: all .5s ease-in-out;
+            padding-left: 0;
+            padding-right: 0;
+            span {
+                display: none;
+            }
+            button {
+                padding-left: 0;
+                width: 100%;
+                min-width: 50px;
+                text-align: center;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .sidebar .curEvent {
+        position: fixed;
+        background-color: #2F323B;
+        bottom: 0;
+        height: 51px;
+        line-height: 51px;
+        margin-bottom: 0px;
+        width: 100%;
+        color: white;
+        border-top: 1px solid #cecece;
+        padding-left: 15px;
+        box-sizing: border-box;
+        padding-right: 15px;
+        button {
+            padding-left: 10px;
+            width: 100px;
+            float: right;
+            height: 100%;
+        }
+    }
+}

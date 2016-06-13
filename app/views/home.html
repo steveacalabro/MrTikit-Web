@@ -1,0 +1,95 @@
+<div class="landingpage">
+    <div class="landingImage">
+        <div class="landingOverlay">
+            <div class="container">
+                <div class="row">
+                    <div class="landingText col-lg-12">Events made Simple</div>
+                    <div class="googleplay col-lg-2 col-lg-offset-4"></div>
+                    <div class="appstore col-lg-2"></div>
+                    <div class="col-lg-4"></div>
+                    <div class="landingButtonContainer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-lg-offset-4">
+                                    <div class="landingButton" ng-click="createEvent()">
+                                        Create Event &nbsp;&nbsp; <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 calloutContainer center">
+                    <div class="callout"><i class="fa fa-4x fa-check calloutIcon"></i></div>
+                    <div class="calloutHeader">Simple</div>
+                    <div class="calloutText">Mr Tikit provides an easy-to-use user interface.</div>
+                </div>
+                <div class="col-lg-4 calloutContainer center">
+                    <div class="callout"><i class="fa fa-4x fa-server calloutIcon"></i></div>
+                    <div class="calloutHeader">Reliable</div>
+                    <div class="calloutText">Users of Mr Tikit can be assured of a high quality system.</div>
+                </div>
+                <div class="col-lg-4 calloutContainer center">
+                    <div class="callout"><i class="fa fa-4x fa-usd calloutIcon"></i></div>
+                    <div class="calloutHeader">Affordable</div>
+                    <div class="calloutText">With little or no financial commitment, anyone is able to create and manage events.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manage">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-7 manageContainer">
+                            <div class="manageTitle">Managing your small event has never been easier</div>
+                            <div class="manageText">Mr Tikit provides a user-friendly tool for event managers to manage all aspects of event ticketing. Some of these features include creating event, editing event information, scanning tickets, generating event reports, processing payment, and so much more. Mr Tikit serves as a 1-stop shop for everything tickets.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tour">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 center tourHeader">How It Works</div>
+                        <div class="col-lg-5"><img class="tourImage" ng-repeat='t in tour' ng-src="{{t.img}}" ng-show="tourIndex==$index" /></div>
+                        <div class="col-lg-5 col-lg-offset-2">
+                            <div class="tourTitle">{{tour[tourIndex].title}}</div>
+                            <div class="tourText">{{tour[tourIndex].text}}</div>
+                            <div class="tourButton" ng-click="learnMore()">Learn More</div>
+                            <div class="tourCount">{{tourIndex+1}} / {{tour.length}}</div>
+                            <div class="tourControlContainer">
+                                <div class="tourControl" ng-click="prev()"><i class="fa fa-chevron-left"></i></div>
+                                <div class="tourControl" ng-click="next()"><i class="fa fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="subscribeText col-lg-12">Subscribe For Updates</div>
+                <div class="col-lg-4 col-lg-offset-4 subscribeInputContainer form-group">
+                    <input class="subscribeInput form-control" ng-model="email" placeholder='Your Email' />
+                    <button class="btn subscribeButton" ng-click="subscribe(email)">
+                        <i class="subscribeIcon fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

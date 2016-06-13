@@ -1,0 +1,42 @@
+<div class='app'>
+    <div class='header' ng-class="{'transparent' : transparentHeader}">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-2 logo'>
+                    Mr Tikit
+                </div>
+                <div class='col-md-6 col-md-offset-4'>
+                    <div class='container-fluid nav'>
+                        <div class='col-md-3 col-md-offset-3'>
+                            <a href='/events'>
+                                Find Event
+                            </a>
+                        </div>
+                        <div class='col-md-3'>
+                            <a href=''>
+                                About
+                            </a>
+                        </div>
+                        <div class='col-md-3'>
+                            <a ng-click='go(goTo)'>
+                                {{loginOrDashboard()}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='content' ui-view></div>
+
+    <div class='footer'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    Copyright &copy; Mr Tikit 2016
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

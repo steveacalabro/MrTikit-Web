@@ -1,0 +1,26 @@
+<div class='locationPage'>
+    <div class='row map'>
+        <div class='col-md-6 col-md-offset-3'>
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' options='{scrollwheel: false}'>
+                <ui-gmap-marker coords="{'latitude': map.marker.latitude, 'longitude': map.marker.longitude}" idkey="1">
+                    <ui-gmap-window options="windowOptions" closeClick="closeClick()" show='true'>
+                        <div>
+                            <h1>{{event.location.name}}</h1>
+                            <h2>{{event.location.location.street}}, {{event.location.location.city}}, {{event.location.location.state}} {{event.location.location.zip}}, {{event.location.location.country}}</h2>
+                            <a ng-href='{{event.location.link}}'>Get Directions</a>
+                        </div>
+                    </ui-gmap-window>
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+    <div class='row info'>
+        <div class='col-md-6 col-md-offset-3'>
+            <div class='location'>
+                {{event.location.name}}
+                <p>{{event.location.location.street}}, {{event.location.location.city}}, {{event.location.location.state}} {{event.location.location.zip}}, {{event.location.location.country}}</p>
+                <a ng-href='{{event.location.link}}'>Get Directions</a>
+            </div>
+        </div>
+    </div>
+</div>

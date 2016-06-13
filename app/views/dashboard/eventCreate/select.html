@@ -1,0 +1,24 @@
+<div class='select'>
+    <md-button class='scratch' ng-click="go('/dashboard/events/create/new')">Create from scratch</md-button>
+    <h3>Unpublished events</h3>
+    <div class='noEvent' ng-show="unpublished.length == 0">No events found</div>
+    <md-card class='event' ng-repeat="e in unpublished">
+        <md-content>
+            <div class='title'>{{e.title}}</div>
+            <md-button class='edit' ng-click="go('/dashboard/events/create/'+e.id+'/edit')">
+                Edit
+            </md-button>
+        </md-content>
+    </md-card>
+
+    <h3>Facebook events</h3>
+    <div class='noEvent' ng-show="(fbevents|fbfilter : events).length == 0">No events found</div>
+    <md-card class='event' ng-repeat="fe in fbevents|fbfilter : events">
+        <md-content>
+            <div class='title'>{{fe.name}}</div>
+            <md-button class='edit' ng-click="createfb(fe)">
+                Create
+            </md-button>
+        </md-content>
+    </md-card>
+</div>

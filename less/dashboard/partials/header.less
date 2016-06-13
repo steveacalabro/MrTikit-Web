@@ -1,0 +1,51 @@
+.header {
+    line-height: 50px;
+    background-color: #22242B;
+    color: #cccccc;
+    .logoContainer {
+        line-height: 50px;
+        height: 50px;
+        margin-left: -50px;
+        margin-right: 50px;
+        .title {
+            font-family: @MT_FONT_LOGO;
+            display: inline;
+            line-height: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 30px;
+        }
+    }
+    .headerItem {
+        cursor: pointer;
+        display: inline;
+        margin-right: 20px;
+        font-size: 15px;
+        text-align: right;
+        .headerItemText {
+            display: inline;
+            margin-right: 10px;
+        }
+        .fa {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &:focus {
+            border: 0;
+            outline: 0;
+        }
+        &:first-of-type {
+            text-align: left;
+        }
+        &:last-of-type {
+            margin-left: -90px;
+        }
+    }
+    .menubutton {
+        padding-left: 15px;
+    }
+    .logo {
+        height: 50px;
+        margin-right: 5px;
+    }
+}

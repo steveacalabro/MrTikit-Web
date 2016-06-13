@@ -1,0 +1,13 @@
+<div class="eventsPage container">
+    <h1>Events</h1>
+    <md-input-container>
+        <label>Search</label>
+        <input type="text" ng-model="query">
+    </md-input-container>
+    <div ng-repeat="e in events | filter:query" class="event">
+        <div class="attribute title">{{e.title}}</div>
+        <div class="attribute location">{{e.location.name}}</div>
+        <div class="attribute date">{{e.startDateTime|date:"MMM d, y h:mm a"}}</div>
+        <button class="viewButton" ng-click="go('events/'+e.id)">View</button>
+    </div>
+</div>

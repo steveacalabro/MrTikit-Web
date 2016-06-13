@@ -1,0 +1,36 @@
+<div class='container eventPage'>
+    <div class='row'>
+        <div class='col-md-12 image'>
+            <div class='info'>
+                <div class='date'>
+                    <div class='month'>
+                        {{event.startDateTime | date:'MMM'}}
+                    </div>
+                    <div class='day'>
+                        {{event.startDateTime | date:'d'}}
+                    </div>
+                </div>
+                <div class='title'>
+                    {{event.title}}
+                </div>
+            </div>
+            <img src='https://scontent-iad3-1.xx.fbcdn.net/hphotos-xlf1/v/t1.0-9/12813916_10208192269592004_2427574264893653872_n.jpg?oh=ee6eefb71469c2a25e76d8797e866504&oe=575A01C5' />
+        </div>
+    </div>
+    <div class='row actions'>
+        <div class='col-md-3' ng-class="{'active' : active.home}" ng-click="go('/events/'+event.id)">
+            Home
+        </div>
+        <div class='col-md-3' ng-class="{'active' : active.about}" ng-click="go('/events/'+event.id+'/about')">
+            About
+        </div>
+        <div class='col-md-3' ng-class="{'active' : active.location}" ng-click="go('/events/'+event.id+'/location')">
+            Location
+        </div>
+        <div class='col-md-3' ng-class="{'active' : active.tickets}" ng-click="go('/events/'+event.id+'/tickets')">
+            Tickets
+        </div>
+    </div>
+    <div class='content' ui-view>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="reviewPurchase container">
+    <div class=loading ng-hide="loadComplete">
+        <div class="spinnerContainer">
+            <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+        </div>
+        <div>Finalizing your purchase.</div>
+    </div>
+    <div class="tickets" ng-show="loadComplete">
+        <md-card ng-repeat="ticket in tickets">
+            <md-card-content>
+                <div class="event">{{eventTitle}}</div>
+                <md-button class="view" ng-click="view(ticket.id)">view</md-button>
+            </md-card-content>
+        </md-card>
+    </div>
+
+</div>

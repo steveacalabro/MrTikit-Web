@@ -1,0 +1,8 @@
+node_modules/*
+app/lib/*
+.tmp/
+.DS_STORE
+*/.DS_STORE
+.brackets.json
+app/styles/mainStyle.css
+app/styles/mainStyleFixed.css
