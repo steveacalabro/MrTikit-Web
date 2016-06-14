@@ -3,6 +3,10 @@ This is a public clone of the repository used for MrTikit. Mrtikit is a 2016 Dre
 
 Parts of this repository have been changed to remove confidential information
 
+***
+**Important Note** This project was at the beta stage. Due to this, some of the features are not implemented. In the release notes you can read more about this.
+***
+
 ##Overview
 Mr Tikit is an application designed to provide a ticketing system for Facebook events. The system integrates directly with Facebook to obtain event information, provide status updates, and post to the event page. Once the information is obtained, the system will create an event page synced from the information and provide users the ability to purchase tickets. 
 
